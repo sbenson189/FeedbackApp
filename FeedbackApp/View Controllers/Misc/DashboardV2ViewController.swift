@@ -13,11 +13,11 @@ class DashboardV2ViewController: UIViewController {
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var codeButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let code = DBHelper.inst.getUserCode(username: DBHelper.inst.currentUser)
+        LoginViewController.timer.invalidate()
 
         codeButton.setTitle(code, for: .normal)
         
@@ -39,6 +39,10 @@ class DashboardV2ViewController: UIViewController {
         
     }
     
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        LoginViewController.timer.invalidate()
+//    }
+
     @IBAction func copyCode(_ sender: UIButton) {
         UIPasteboard.general.string = codeButton.title(for: .normal)
     }

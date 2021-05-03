@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var rememberMeSwitch: UISwitch!
     @IBOutlet weak var invalidCredentialsLabel: UILabel!
+    static var timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,25 @@ class LoginViewController: UIViewController {
         if userDef.bool(forKey: "switchBool") {
             rememberMeSwitch.isOn = true
         }
+//        DBHelper.inst.createRoomForFeedback(roomNumber: 100)
 //        DBHelper.inst.addRoomForUser(object: ["username": "scott"], room: 100)
+
+        LoginViewController.timer = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(screenSaver), userInfo: nil, repeats: true)
+        let resetTimer = UITapGestureRecognizer(target: self, action: #selector(resetTimer))
+        self.view.isUserInteractionEnabled = true
+        self.view.addGestureRecognizer(resetTimer)
+    }
+
+    @objc func screenSaver() {
+        let mainBoard = UIStoryboard(name: "Main", bundle: nil)
+        let screensaverBoard = mainBoard.instantiateViewController(withIdentifier: "screensaver") as! AnimatedViewController
+        self.navigationController?.pushViewController(screensaverBoard, animated: true)
+        LoginViewController.timer.invalidate()
+    }
+
+    @objc func resetTimer() {
+        LoginViewController.timer.invalidate()
+        LoginViewController.timer = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(screenSaver), userInfo: nil, repeats: true)
     }
 
     // -- Remember Me --
@@ -42,7 +61,7 @@ class LoginViewController: UIViewController {
         }
         userDef.set(rememberMeSwitch.isOn, forKey: "switchBool")
     }
-
+    
     // -- Login --
     func validateLoginInfo (enteredUsername : String, enteredPassword: String, dbUsername : String, dbPassword : String) -> Bool {
         if enteredUsername == dbUsername && enteredPassword == dbPassword {

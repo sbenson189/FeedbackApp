@@ -123,6 +123,9 @@ class CategoryV2ViewController: UIViewController {
         if !validSubmission {
             print("no")
         } else {
+            let currentUser = DBHelper.inst.currentUser
+            let roomNumber = DBHelper.inst.getUserRoomNumber(object: ["username" : currentUser])
+            DBHelper.inst.addRoomReview(gymReviewScore : gymStatus, foodReviewScore: foodStatus, roomServiceReviewScore: roomServiceStatus, poolAndSpaReviewScore: poolAndSpaStatus, overallReviewScore: overallStatus, room: roomNumber)
             let overallBoard = mainBoard.instantiateViewController(withIdentifier: "thankYou") as! ThankYouViewController
             self.navigationController?.pushViewController(overallBoard, animated: true)
         }

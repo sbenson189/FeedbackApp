@@ -44,24 +44,28 @@ class DBHelper {
         }
     }
     
-    func addRoomReview(object: [String : String], room: Int) {
-//        var user = Users()
-//        let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
-//        fetchReq.returnsObjectsAsFaults = false
-//        fetchReq.predicate = NSPredicate(format: "username == %@", object["username"]!)
-//
-//        do {
-//            let userFetch = try context?.fetch(fetchReq)
-//
-//            if (userFetch?.count != 0) {
-//                user = userFetch?.first as! Users
-//                user.code = code
-//                try context?.save()
-//                print("User info updated")
-//            }
-//        } catch {
-//            print("Error while trying to update user info")
-//        }
+    func addRoomReview(gymReviewScore : Int, foodReviewScore: Int, roomServiceReviewScore: Int, poolAndSpaReviewScore: Int, overallReviewScore: Int, room: Int) {
+        var feedback = Feedback()
+        let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "Feedback")
+        fetchReq.returnsObjectsAsFaults = false
+        fetchReq.predicate = NSPredicate(format: "roomNumber == %d", Int16(room))
+
+        do {
+            let feedbackFetch = try context?.fetch(fetchReq)
+
+            if (feedbackFetch?.count != 0) {
+                feedback = feedbackFetch?.first as! Feedback
+                feedback.gym = Int16(gymReviewScore)
+                feedback.attribute = Int16(foodReviewScore)
+                feedback.roomService = Int16(roomServiceReviewScore)
+                feedback.poolAndSpa = Int16(poolAndSpaReviewScore)
+                feedback.overall = Int16(overallReviewScore)
+                try context?.save()
+                print("Feedback info updated")
+            }
+        } catch {
+            print("Error while trying to update user info")
+        }
     }
     
     func addUserCode(object : [String : String], code: String) {
@@ -123,19 +127,23 @@ class DBHelper {
         return Int(user.roomNumber)
     }
     
-//    func addRoomForFeedback (object : [String : Int16], id: Int) {
-//        let feedback = NSEntityDescription.insertNewObject(forEntityName: "Feedback", into: context!) as! Feedback
-//        feedback.roomNumber = object["roomNumber"]!
-//        feedback.id = Int16(id)
-//        
-//        do {
-//            try context?.save()
-//            print("Data saved")
-//            
-//        } catch {
-//            print("Data was not saved")
-//        }
-//    }
+    func createRoomForFeedback (roomNumber: Int) {
+        let feedback = NSEntityDescription.insertNewObject(forEntityName: "Feedback", into: context!) as! Feedback
+        
+        feedback.roomNumber = Int16(roomNumber)
+        feedback.roomService = 0
+        feedback.poolAndSpa = 0
+        feedback.overall = 0
+        feedback.attribute = 0
+        feedback.gym = 0
+        
+        do {
+            try context?.save()
+            print("Data for room: \(roomNumber) saved")
+        } catch {
+            print("Data was not saved")
+        }
+    }
     
     func getUsers () -> [Users] {
         var user = [Users]()
@@ -209,34 +217,6 @@ class DBHelper {
         
     }
     
-//    func updateUserId(object: [String : String], id: Int16) {
-//        var user = Users()
-//        let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
-//        fetchReq.returnsObjectsAsFaults = false
-//        fetchReq.predicate = NSPredicate(format: "username == %@", object["username"]!)
-//
-//        do {
-//            let userFetch = try context?.fetch(fetchReq)
-//
-//            if (userFetch?.count != 0) {
-//                user = userFetch?.first as! Users
-//                user.id = id
-//                try context?.save()
-//                print("User info updated")
-//            }
-//
-//        } catch {
-//            print("Error while trying to update user info")
-//        }
-//
-//    }
-    
-
-    
-//    func updateFeedback (object: [String : String]) {
-//
-//    }
-    
     public var currentUser = String()
     
     func deleteUser (username : String) {
@@ -279,39 +259,5 @@ class DBHelper {
         }
         
     }
-    
 
-//    func deleteFeedback (name : String) {
-//        var fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Feedback")
-//
-//        do {
-//
-//        } catch {
-//
-//        }
-//    }
-    
-    
-//    func getUserId(username : String) {
-//
-//        var user = Users()
-//        let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Users")
-//        fetchReq.returnsObjectsAsFaults = false
-//        fetchReq.predicate = NSPredicate(format: "username == %@", username)
-//
-//        fetchReq.fetchLimit = 1
-//        do {
-//            let req = try context?.fetch(fetchReq) as! [Users]
-//
-//            if req.count != 0 {
-//                user = req.first!
-//            } else {
-//                print("User not found")
-//            }
-//        } catch {
-//            print("Error while trying to retrieve user")
-//        }
-//        return user.id
-//    }
-//
 }

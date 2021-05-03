@@ -15,6 +15,7 @@ class PasswordResetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        LoginViewController.timer.invalidate()
     }
     
     func validateFieldEntry () -> Bool {

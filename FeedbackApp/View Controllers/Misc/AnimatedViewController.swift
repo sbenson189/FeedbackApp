@@ -15,12 +15,29 @@ class AnimatedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        animate()
+    }
+    
+    func animate() {
+        UIView.animate(withDuration: 2.0, delay: 0.0, options: [.repeat, .autoreverse], animations: {
+            self.discountLabel.alpha = 0
+            self.discountLabel.center.x -= 200
+            
+            self.beHeardLabel.alpha = 0
+            self.beHeardLabel.center.x -= 200
+            
+            self.getRewardsLabel.alpha = 0
+            self.getRewardsLabel.center.x -= 200
+            
+        }, completion: nil)
         
-        let myView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-        myView.backgroundColor = .red
-        view.addSubview(myView)
-
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let mainBoard = UIStoryboard(name: "Main", bundle: nil)
+        let loginBoard = mainBoard.instantiateViewController(withIdentifier: "login") as! LoginViewController
+        self.navigationController?.pushViewController(loginBoard, animated: true)
+    }
     
 }
+
