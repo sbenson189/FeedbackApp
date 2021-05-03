@@ -38,10 +38,6 @@ class DashboardV2ViewController: UIViewController {
         }
         
     }
-    
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        LoginViewController.timer.invalidate()
-//    }
 
     @IBAction func copyCode(_ sender: UIButton) {
         UIPasteboard.general.string = codeButton.title(for: .normal)
@@ -53,6 +49,4 @@ class DashboardV2ViewController: UIViewController {
         let loginBoard = mainBoard.instantiateViewController(withIdentifier: "login") as! LoginViewController
         self.navigationController?.pushViewController(loginBoard, animated: true)
     }
-    
-    
 }
