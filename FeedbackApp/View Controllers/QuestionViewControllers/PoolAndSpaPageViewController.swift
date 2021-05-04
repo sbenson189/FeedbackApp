@@ -85,6 +85,4 @@ class PoolAndSpaPageViewController: UIViewController, UIPickerViewDelegate, UIPi
             print("invalid")
         }
     }
-    
-
 }

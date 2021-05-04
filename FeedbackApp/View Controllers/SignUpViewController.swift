@@ -20,7 +20,6 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        LoginViewController.timer.invalidate()
     }
 
     @IBAction func signUpSubmitted(_ sender: Any) {

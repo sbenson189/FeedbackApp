@@ -75,8 +75,6 @@ class RoomServicePageViewController: UIViewController, UIPickerViewDelegate, UIP
         let mainBoard = UIStoryboard(name: "Main", bundle: nil)
         let categoriesBoard = mainBoard.instantiateViewController(withIdentifier: "category2") as! CategoryV2ViewController
         
-//        validResponse ? print("valid", counter) : print("invalid")
-        
         if validResponse {
             // Pass counter value here as total score for category.
             DBHelper.roomServiceComplete = true
@@ -85,6 +83,4 @@ class RoomServicePageViewController: UIViewController, UIPickerViewDelegate, UIP
             print("invalid")
         }
     }
-    
-
 }

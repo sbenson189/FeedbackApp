@@ -17,6 +17,7 @@
 		5E2A3664263792B800E28AA9 /* RoomServicePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A3663263792B800E28AA9 /* RoomServicePageViewController.swift */; };
 		5E2A3666263792D100E28AA9 /* OverallPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A3665263792D100E28AA9 /* OverallPageViewController.swift */; };
 		5E2A36D12638FBDA00E28AA9 /* DashboardV2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A36D02638FBDA00E28AA9 /* DashboardV2ViewController.swift */; };
+		5E2B96B126418F4A000160BD /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2B96B026418F4A000160BD /* SplashScreenViewController.swift */; };
 		5E5673AF262E60C70087E756 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5673AE262E60C70087E756 /* CategoryTableViewCell.swift */; };
 		5E5673C6262F38780087E756 /* text.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5E5673C5262F38780087E756 /* text.rtf */; };
 		5E567434262F87810087E756 /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E567433262F87810087E756 /* ThankYouViewController.swift */; };
@@ -29,7 +30,6 @@
 		5EBF24E4262E2FDA00BC9ED3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBF24E2262E2FDA00BC9ED3 /* LaunchScreen.storyboard */; };
 		5EBF24F1262E5D8C00BC9ED3 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBF24F0262E5D8C00BC9ED3 /* CategoryTableViewController.swift */; };
 		5ED6F5CD263B455300385178 /* CategoryV2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED6F5CC263B455300385178 /* CategoryV2ViewController.swift */; };
-		5ED6F5CF263C576E00385178 /* AnimatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED6F5CE263C576E00385178 /* AnimatedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +43,7 @@
 		5E2A3663263792B800E28AA9 /* RoomServicePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomServicePageViewController.swift; sourceTree = "<group>"; };
 		5E2A3665263792D100E28AA9 /* OverallPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallPageViewController.swift; sourceTree = "<group>"; };
 		5E2A36D02638FBDA00E28AA9 /* DashboardV2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardV2ViewController.swift; sourceTree = "<group>"; };
+		5E2B96B026418F4A000160BD /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		5E5673AE262E60C70087E756 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		5E5673C5262F38780087E756 /* text.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = text.rtf; sourceTree = "<group>"; };
 		5E567433262F87810087E756 /* ThankYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		5EBF24E5262E2FDA00BC9ED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EBF24F0262E5D8C00BC9ED3 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		5ED6F5CC263B455300385178 /* CategoryV2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryV2ViewController.swift; sourceTree = "<group>"; };
-		5ED6F5CE263C576E00385178 /* AnimatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +86,9 @@
 		5E56741D262F85D30087E756 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				5E2B96B026418F4A000160BD /* SplashScreenViewController.swift */,
 				5EBF24D8262E2FD900BC9ED3 /* ViewController.swift */,
 				5ED6F5CC263B455300385178 /* CategoryV2ViewController.swift */,
-				5ED6F5CE263C576E00385178 /* AnimatedViewController.swift */,
 				5E2A36D02638FBDA00E28AA9 /* DashboardV2ViewController.swift */,
 				5E567433262F87810087E756 /* ThankYouViewController.swift */,
 				5E0EBCA62635F8B100DB4F13 /* PasswordResetViewController.swift */,
@@ -261,10 +261,10 @@
 				5EBF24F1262E5D8C00BC9ED3 /* CategoryTableViewController.swift in Sources */,
 				5E2A3666263792D100E28AA9 /* OverallPageViewController.swift in Sources */,
 				5E0EBC9A2633A5BB00DB4F13 /* DBHelper.swift in Sources */,
-				5ED6F5CF263C576E00385178 /* AnimatedViewController.swift in Sources */,
 				5E0EBCAC2637291A00DB4F13 /* GymPageViewController.swift in Sources */,
 				5EBF24DF262E2FD900BC9ED3 /* FeedbackApp.xcdatamodeld in Sources */,
 				5ED6F5CD263B455300385178 /* CategoryV2ViewController.swift in Sources */,
+				5E2B96B126418F4A000160BD /* SplashScreenViewController.swift in Sources */,
 				5E2A3662263792A500E28AA9 /* PoolAndSpaPageViewController.swift in Sources */,
 				5E2A3664263792B800E28AA9 /* RoomServicePageViewController.swift in Sources */,
 				5EBF24D7262E2FD900BC9ED3 /* SceneDelegate.swift in Sources */,

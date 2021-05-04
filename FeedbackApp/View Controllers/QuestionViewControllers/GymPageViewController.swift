@@ -75,9 +75,7 @@ class GymPageViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBAction func saveResponses(_ sender: UIButton) {
         let mainBoard = UIStoryboard(name: "Main", bundle: nil)
         let categoriesBoard = mainBoard.instantiateViewController(withIdentifier: "category2") as! CategoryV2ViewController
-        
-//        validResponse ? print("valid", counter) : print("invalid")
-        
+
         if validResponse {
             // Pass counter value here as total score for category.
             DBHelper.gymComplete = true
@@ -86,5 +84,4 @@ class GymPageViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             print("invalid")
         }
     }
-    
 }
