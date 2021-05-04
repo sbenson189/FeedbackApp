@@ -12,7 +12,7 @@ class SplashScreenViewController: UIViewController {
     @IBOutlet weak var bottom: UIView!
     @IBOutlet weak var left: UIView!
     @IBOutlet weak var right: UIView!
-    @IBOutlet weak var tag: UILabel!
+    
     static var timer = Timer()
     
     override func viewDidLoad() {
