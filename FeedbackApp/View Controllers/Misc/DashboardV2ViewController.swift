@@ -18,7 +18,6 @@ class DashboardV2ViewController: UIViewController {
         super.viewDidLoad()
 
         let code = DBHelper.inst.getUserCode(username: DBHelper.inst.currentUser)
-
         codeButton.setTitle(code, for: .normal)
         
         self.navigationItem.leftBarButtonItem = nil
