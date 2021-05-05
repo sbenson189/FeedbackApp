@@ -12,12 +12,13 @@
         <!--Navigation Controller-->
         <scene sceneID="jru-TP-D3n">
             <objects>
-                <navigationController navigationBarHidden="YES" hidesBarsOnTap="YES" id="cKO-ev-uYL" sceneMemberID="viewController">
+                <navigationController hidesBarsOnTap="YES" id="cKO-ev-uYL" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" barStyle="black" backIndicatorImage="arrowshape.turn.up.left" catalog="system" id="1dS-Tl-gDt">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.82410032580000003" green="0.95071560870000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="0.256252496" green="0.34446388550000001" blue="0.75507409790000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="barTintColor" name="Dark Mode Light Blue"/>
+                        <color key="barTintColor" name="Dark Mode Dark Blue"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.256252496" green="0.34446388550000001" blue="0.75507409790000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </textAttributes>
