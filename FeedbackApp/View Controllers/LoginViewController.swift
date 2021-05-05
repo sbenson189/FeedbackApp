@@ -13,7 +13,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var rememberMeSwitch: UISwitch!
     @IBOutlet weak var invalidCredentialsLabel: UILabel!
-//    static var timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()

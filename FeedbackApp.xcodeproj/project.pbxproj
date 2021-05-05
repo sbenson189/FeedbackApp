@@ -18,6 +18,7 @@
 		5E2A3666263792D100E28AA9 /* OverallPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A3665263792D100E28AA9 /* OverallPageViewController.swift */; };
 		5E2A36D12638FBDA00E28AA9 /* DashboardV2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A36D02638FBDA00E28AA9 /* DashboardV2ViewController.swift */; };
 		5E2B96B126418F4A000160BD /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2B96B026418F4A000160BD /* SplashScreenViewController.swift */; };
+		5E4B35C0264339BC00C09DA4 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B35BF264339BC00C09DA4 /* TestViewController.swift */; };
 		5E5673AF262E60C70087E756 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5673AE262E60C70087E756 /* CategoryTableViewCell.swift */; };
 		5E5673C6262F38780087E756 /* text.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5E5673C5262F38780087E756 /* text.rtf */; };
 		5E567434262F87810087E756 /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E567433262F87810087E756 /* ThankYouViewController.swift */; };
@@ -44,6 +45,7 @@
 		5E2A3665263792D100E28AA9 /* OverallPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallPageViewController.swift; sourceTree = "<group>"; };
 		5E2A36D02638FBDA00E28AA9 /* DashboardV2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardV2ViewController.swift; sourceTree = "<group>"; };
 		5E2B96B026418F4A000160BD /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		5E4B35BF264339BC00C09DA4 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		5E5673AE262E60C70087E756 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		5E5673C5262F38780087E756 /* text.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = text.rtf; sourceTree = "<group>"; };
 		5E567433262F87810087E756 /* ThankYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				5ED6F5CC263B455300385178 /* CategoryV2ViewController.swift */,
 				5E2A36D02638FBDA00E28AA9 /* DashboardV2ViewController.swift */,
 				5E567433262F87810087E756 /* ThankYouViewController.swift */,
+				5E4B35BF264339BC00C09DA4 /* TestViewController.swift */,
 				5E0EBCA62635F8B100DB4F13 /* PasswordResetViewController.swift */,
 			);
 			path = Misc;
@@ -263,6 +266,7 @@
 				5E0EBC9A2633A5BB00DB4F13 /* DBHelper.swift in Sources */,
 				5E0EBCAC2637291A00DB4F13 /* GymPageViewController.swift in Sources */,
 				5EBF24DF262E2FD900BC9ED3 /* FeedbackApp.xcdatamodeld in Sources */,
+				5E4B35C0264339BC00C09DA4 /* TestViewController.swift in Sources */,
 				5ED6F5CD263B455300385178 /* CategoryV2ViewController.swift in Sources */,
 				5E2B96B126418F4A000160BD /* SplashScreenViewController.swift in Sources */,
 				5E2A3662263792A500E28AA9 /* PoolAndSpaPageViewController.swift in Sources */,
