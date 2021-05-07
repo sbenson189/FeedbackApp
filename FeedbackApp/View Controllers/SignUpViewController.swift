@@ -17,7 +17,6 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var accountCreatedLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -44,5 +43,4 @@ class SignUpViewController: UIViewController {
         passwordField.text = ""
         
     }
-
 }

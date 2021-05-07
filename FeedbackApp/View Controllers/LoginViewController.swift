@@ -88,5 +88,4 @@ class LoginViewController: UIViewController {
             passwordField.text = ""
         }
     }
-
 }

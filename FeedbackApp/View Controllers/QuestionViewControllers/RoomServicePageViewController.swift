@@ -76,7 +76,6 @@ class RoomServicePageViewController: UIViewController, UIPickerViewDelegate, UIP
         let categoriesBoard = mainBoard.instantiateViewController(withIdentifier: "category2") as! CategoryV2ViewController
         
         if validResponse {
-            // Pass counter value here as total score for category.
             DBHelper.roomServiceComplete = true
             self.navigationController?.pushViewController(categoriesBoard, animated: true)
         } else {

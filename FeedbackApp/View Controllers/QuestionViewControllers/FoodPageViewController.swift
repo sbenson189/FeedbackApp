@@ -76,7 +76,6 @@ class FoodPageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let categoriesBoard = mainBoard.instantiateViewController(withIdentifier: "category2") as! CategoryV2ViewController
         
         if validResponse {
-            // Pass counter value here as total score for category.
             DBHelper.foodComplete = true
             self.navigationController?.pushViewController(categoriesBoard, animated: true)
         } else {
